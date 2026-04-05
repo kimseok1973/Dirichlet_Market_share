@@ -32,8 +32,8 @@ Goodhardt, G.J., Ehrenberg, A.S.C. & Chatfield, C. (1984).
 ├── param_real_infer.png                 # パラメータ事後分布
 ├── real_infer_observ.png                # 浸透率・購買頻度の比較
 ├── double_jeopardy.png                  # Double Jeopardy 可視化
-├── README.md
-└── CLAUDE.md
+└──  README.md
+
 ```
 
 ## ノートブック構成
@@ -58,21 +58,8 @@ Pkg.add(["Turing", "Distributions", "StatsPlots", "DataFrames",
 
 **Julia バージョン**: 1.10 以上推奨
 
-## 実行手順
-
-1. Jupyter Lab / Jupyter Notebook を起動
-2. `Dirichlet_MarketShare_Turing.ipynb` を開く
-3. セルを上から順に実行（Cell 3 のパッケージインストールは初回のみ）
-4. MCMC サンプリング（Cell 18）は数分かかる
-
 ## 主要な出力指標
 
 - **浸透率** $b_j$：期間中に少なくとも1回購買した消費者の割合
 - **平均購買頻度** $w_j$：購買者1人あたりの平均購買回数
 - **Double Jeopardy**：小シェアブランドは浸透率・購買頻度とも低い
-
-## 注意事項
-
-- MCMCChains からのパラメータ取得は `get(chain, :M).M` および `namesingroup(chain, :p)` を使用
-- `Array(chain)` は環境によって 2D / 3D の返り値が異なるため使用しない
-- ノートブックを更新後は Jupyter で「File → Revert Notebook」で再読み込みが必要
