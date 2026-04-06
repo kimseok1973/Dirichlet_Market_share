@@ -32,8 +32,8 @@ Goodhardt, G.J., Ehrenberg, A.S.C. & Chatfield, C. (1984).
 ├── param_real_infer.png                 # パラメータ事後分布
 ├── real_infer_observ.png                # 浸透率・購買頻度の比較
 ├── double_jeopardy.png                  # Double Jeopardy 可視化
-└──  README.md
-
+├── qiita_article.md                     # Qiita 投稿用記事
+└── README.md
 ```
 
 ## ノートブック構成
@@ -57,6 +57,13 @@ Pkg.add(["Turing", "Distributions", "StatsPlots", "DataFrames",
 ```
 
 **Julia バージョン**: 1.10 以上推奨
+
+## 実行手順
+
+1. Jupyter Lab / Jupyter Notebook を起動
+2. `Dirichlet_MarketShare_Turing.ipynb` を開く
+3. セルを上から順に実行（パッケージインストールは初回のみ）
+4. MCMC サンプリングは数分かかる（N=3,000、1000 サンプル × 2 チェーン）
 
 ## 主要な出力指標
 
